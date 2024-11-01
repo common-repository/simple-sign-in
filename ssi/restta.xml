@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<restta version="0.2">
+	<appClass name="ssi" version="0.3" detail="http://peopletab.com/ssi.html">
+		<pathPrefix></pathPrefix>
+		<resource name="ticket_gen">
+			<input name="from_uri" type="get"></input>
+			<input name="login_nick" type="get"></input>
+			<input name="nonce_hash" type="get"></input>
+			<uriPattern>
+				/wp-admin/admin.php?page=ssi-confirm
+			</uriPattern>
+		</resource>
+		<resource name="consumer_auth">
+			<uriPattern>
+				/wp-content/plugins/ssi/consumer_auth.php
+			</uriPattern>
+		</resource>
+		<resource name="ticket_provider">
+			<input name="nonce_value" type="get"></input>
+			<input name="nonce_hash_func" type="get"></input>
+			<input name="token_hash" type="get"></input>
+			<uriPattern>
+				/wp-content/plugins/ssi/ticket_provider.php
+			</uriPattern>
+		</resource>
+	</appClass>
+</restta>

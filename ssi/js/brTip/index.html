@@ -1,0 +1,129 @@
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>brTip 1.1.0</title>
+	<meta name="author" content="Gabriel Sobrinho" />
+	<meta name="content-language" content="eng" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link type="text/css" href="brTip.css" rel="stylesheet" media="all" />
+	<style type="text/css">
+	<!--
+	body {
+		font: 11px Arial;
+		color: #666;
+		padding: 10px;
+	}
+	
+	h1 {
+		color: #666;
+		margin-bottom: 20px;
+		font:Tahoma, Arial, Verdana;
+		font-size: 150%;
+	}
+	
+	p {
+		margin: 0;
+	}
+	p.demo {
+		float: left;
+		background: #FAFAFA;
+		border: 1px dashed #AFAFAF;
+		padding: 10px;
+		margin: 10px;
+		cursor: help;
+	}
+	
+	#explain {
+		margin-top: 20px;
+	}
+	#explain ol > li {
+		padding-bottom: 20px;
+	}
+	-->
+	</style>
+</head>
+<body>
+
+<h1>brTip 1.1.0 - By G. Sobrinho</h1>
+
+<div id="demos">
+	<p class="demo" title="I need a more beatiful page of demonstration to this plugin, help me?">Simple - brTip Off</p>
+	<p class="demo" title="I need a more beatiful page of demonstration to this plugin, help me?">Simple - brTip On</p>
+	
+	<p class="demo" title="<strong>This support HTML also.</strong><br /><br /><img src='http://www.google.com.br/images/firefox/light.png' alt='' /><br /><em style='color:red'>Is not accessible if user don't use JS in browser.</em>">HTML - brTip Off</p>
+	<p class="demo" title="<strong>This support HTML also.</strong><br /><br /><img src='http://www.google.com.br/images/firefox/light.png' alt='' /><br /><em style='color:red'>Is not accessible if user don't use JS in browser.</em>">HTML - brTip On</p>
+</div>
+
+<div style="clear:both;">&nbsp;</div>
+
+<div id="explain">
+	<p>This jQuery plugin was inspired and based on various other plugins of tooltip, but this is better =)</p>
+	<br />
+	<ol>
+		<li>
+			<p><strong>Instalation:</strong></p>
+			<br />
+			<ul>
+				<li>Include jQuery</li>
+				<li>Include brTip</li>
+				<li>Include CSS of brTip</li>
+			</ul>
+		</li>
+		<li>
+			<p><strong>Select the element and apply:</strong></p>
+			<br />
+			<ul>
+				<li>$('.brTip').brTip();</li>
+				<li>$('img').brTip();</li>
+			</ul>
+		</li>
+		<li>
+			<p><strong>It's full customizable with options. The options is explained here:</strong></p>
+			<br />
+			<p>fadeIn: Number or String ('') - Speed of fadeIn</p>
+			<p>fadeOut: Number or String ('') - Speed of fadeOut</p>
+			<p>toShow: Number (100) - Delay time (ms) to show</p>
+			<p>toHide: Number (500) - Delay time (ms) to hide</p>
+			<p>opacity: Number (0.8) - The brTip opacity, from 0 - 1</p>
+			<p>top: Number (1) - The top position of brTip is sum of mouse position with this</p>
+			<p>left: Number (25) - The same of top, but for the left position</p>
+			<p>title: String ('Help') - The title of brTip</p>
+			<br />
+			<ul>
+				<li>$('a[@rel=brTip]').brTip({fadeIn: 'slow', left: -50, top: 10});</li>
+				<li>$('a[@rel=brTip]').brTip({title: 'About this:'});</li>
+			</ul>
+		</li>
+		<li>
+			<p><strong>brTip has been tested in the following browsers:</strong></p>
+			<br />
+			<ul>
+				<li>IE 6 & 7</li>
+				<li>Firefox 2</li>
+				<li>Opera 9</li>
+				<li>Safari 3</li>
+			</ul>
+		</li>
+		<li>
+			<p><strong>Know issues:</strong></p>
+			<br />
+			<ul>
+				<li><del>Don't allow multiple instances</del></li>
+			</ul>
+		</li>
+	</ol>
+</div>
+
+<!-- JS Scripts -->
+<script type="text/javascript" src="jquery-1.2.3.pack.js"></script>
+<script type="text/javascript" src="brTip.pack.js"></script>
+<script type="text/javascript">
+$('#demos p:eq(1)').brTip({title: 'Instance 1', opacity: 0.5, fadeIn: 'fast', fadeOut: 'fast'});
+$('#demos p:eq(3)').brTip({title: 'Instance 2', fadeIn: 'slow', fadeOut: 'slow'});
+</script>
+<!-- JS Scripts -->
+
+</body>
+</html>
